@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app{
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.select-time ,.song-play ,.song-picker{
+    height: 80%;
+    flex: 1;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    /* background: chocolate; */
+}
+
+.select-time button, .song-picker button{
+    color: white;
+    background: none;
+    font-size: 1.5rem;
+    border: 2px solid white;
+    padding: 0.5rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.song-picker button{
+    border-radius: 50%;
+}
+.song-picker button:nth-child(1){
+    background: #4972a1;
+}
+.song-picker button:nth-child(2){
+    background: #a14f49;
+}
+
+.select-time button:hover{
+    color: black;
+    background: white;
+}
+
+video{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.song-play{
+    position: relative;
+}
+.song-play svg{
+    position: absolute;
+    width: 60%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    pointer-events: none;
+
+}
+.time-display{
+    position: absolute;
+    bottom: 10%;
+    font-size: 3rem;
+    color: white;
+}
+
+.replay {
+    position: absolute;
+    bottom: 30%;
+}
